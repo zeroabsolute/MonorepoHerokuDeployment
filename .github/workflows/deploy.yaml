@@ -23,4 +23,4 @@ jobs:
         heroku_email: ${{secrets.HEROKU_API_KEY}}
       env:
         API_BASE: "src/web-client"
-        REACT_APP_API_URL: "https://api-02092020.herokuapp.com/"
+        REACT_APP_API_URL: "https://api-02092020.herokuapp.com"
