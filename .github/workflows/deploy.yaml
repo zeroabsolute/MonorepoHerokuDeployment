@@ -13,11 +13,9 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "api-02092020"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
-        appdir: "src/api"
     - name: Release Web Client
       uses: akhileshns/heroku-deploy@v3.0.4
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "web-client-02092020"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
-        appdir: "src/web-client"
