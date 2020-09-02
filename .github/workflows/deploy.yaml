@@ -13,6 +13,8 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "api-02092020"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
+        buildpack: "https://github.com/lstoll/heroku-buildpack-monorepo"
+        buildpack: "heroku/nodejs"
       env:
         API_BASE: "src/api"
     - name: Release Web Client
@@ -21,6 +23,8 @@ jobs:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
         heroku_app_name: "web-client-02092020"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
+        buildpack: "https://github.com/lstoll/heroku-buildpack-monorepo"
+        buildpack: "https://buildpack-registry.s3.amazonaws.com/buildpacks/mars/create-react-app.tgz"
       env:
         API_BASE: "src/web-client"
         REACT_APP_API_URL: "https://api-02092020.herokuapp.com"
